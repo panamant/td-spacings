@@ -1,3 +1,6 @@
-for ($i=0, $i++, $i=200) {
-  .pt-$i = $i;
+$class-slug: pt !default
+
+@for $i from 1 through 100 {
+  .#{$class-slug}-#{$i}
+  padding-top: $i;
 }
