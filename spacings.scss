@@ -1,6 +1,19 @@
-$class-slug: pt !default
+$start: 0;
+$step: 5;
+$max: 200;
+$unit: px;
 
-@for $i from 1 through 100 {
-  .#{$class-slug}-#{$i}
-  padding-top: $i;
+@for $i from $start through $max {
+  @if $i % $step == 0 {
+  .p-#{$i} { padding: #{$i}$unit }
+  .m-#{$i} { margin: #{$i}$unit }
+  .pt-#{$i} { padding-top: #{$i}$unit }
+  .pb-#{$i} { padding-bottom: #{$i}$unit }
+  .pr-#{$i} { padding-right: #{$i}$unit }
+  .pl-#{$i} { padding-left: #{$i}$unit }
+  .mt-#{$i} { margin-top: #{$i}$unit }
+  .mb-#{$i} { margin-bottom: #{$i}$unit }
+  .ml-#{$i} { margin-left: #{$i}$unit }
+  .mr-#{$i} { margin-right: #{$i}$unit }
+  }
 }
